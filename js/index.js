@@ -3,10 +3,10 @@ let slides = ["./images/slideshow_1.png","./images/slideshow_2.png"]
 let slideIndex = 0
 
 
-setInterval(() => {
+const sliderInterval = setInterval(() => {
     slideIndex++;
     if (slideIndex >= slides.length) {
         slideIndex = 0;
     }
     slider.style.backgroundImage = `url(${slides[slideIndex]})`
-},5000)
+},10000)

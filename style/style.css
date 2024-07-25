@@ -17,6 +17,8 @@ body {
     font-family: "High Tower Text";
 }
 
+/* slider */
+
 .head_banner {
     background: url("../images/slideshow_1.png");
     min-height: 40vh;
@@ -36,6 +38,7 @@ body {
 .header_logo {
     width: 455px;
 }
+
 
 .page_header_text {
     text-align: right;
