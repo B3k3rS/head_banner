@@ -11,3 +11,46 @@ a{
 }
 
 /* styles */
+
+body {
+    background: #eee;
+}
+
+.head_banner {
+    background: url("../images/slideshow_1.png");
+    min-height: 40vh;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+}
+
+.page_header {
+    padding: 0 10%;
+    background: rgba(255,255,255,.8);
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_logo {
+    width: 455px;
+}
+
+.page_header_text {
+    text-align: right;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #303030;
+    font-family: "High Tower Text";
+}
+
+.header_navmenu {
+    margin-top: 14px;
+}
+
+.header_navmenu > a {
+    margin: 0 0 0 24px;
+}
+
