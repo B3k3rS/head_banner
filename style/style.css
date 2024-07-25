@@ -14,22 +14,21 @@ a{
 
 body {
     background: #eee;
+    font-family: "High Tower Text";
 }
 
 .head_banner {
     background: url("../images/slideshow_1.png");
     min-height: 40vh;
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     background-repeat: no-repeat;
-
 }
 
 .page_header {
     padding: 0 10%;
     background: rgba(255,255,255,.8);
     display: flex;
-    position: relative;
     align-items: center;
     justify-content: space-between;
 }
@@ -43,7 +42,6 @@ body {
     font-size: 14px;
     text-transform: uppercase;
     color: #303030;
-    font-family: "High Tower Text";
 }
 
 .header_navmenu {
@@ -51,6 +49,6 @@ body {
 }
 
 .header_navmenu > a {
-    margin: 0 0 0 24px;
+    margin-left: 24px;
 }
 
