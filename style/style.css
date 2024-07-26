@@ -18,15 +18,9 @@ body{
     padding: 0;
     margin: 0;
     font-family: "High Tower Text";
-    /* background-image: url("../images/HorizontalGrain\ BG.jpg"), url("../images/Crest\ BG.png"), url("../images/Crest\ BG.png"); */
-    /* background-repeat: repeat, no-repeat, no-repeat; */
-    /* background-position: top left, bottom right; */
-
-    /* background-image: url("../images/HorizontalGrain\ BG.jpg"), url("../images/Crest\ BG.png"); */
-
     background-image: url("../images/Crest\ BG.png"), url("../images/Crest\ BG.png"), url("../images/HorizontalGrain\ BG.jpg");
     background-repeat: no-repeat, no-repeat, repeat;
-    background-position: 15% 15%, bottom right, left top;
+    background-position: 15% 15%, 85% 100%, left top;
 }
 
 a {
@@ -190,6 +184,7 @@ section.about_us h3 {
 .about_mailing > form > input {
     width: 210px;
     line-height: 30px;
+    font-size: 14px;
     border: none;
     padding: 0;
 }
@@ -291,7 +286,7 @@ section.sell_wine > article:last-child {
     border: none;
     padding: 0;
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .wine_sell_card > .wine_sell_info > form > *
@@ -328,11 +323,43 @@ section.sell_wine > article:last-child {
     line-height: 27px;
 }
 
+/* wine collection */
+section.collection_discover {
+    background: rgba(255, 255, 255, .8);
+    margin: 50px auto;
+    box-shadow: 11px 11px 20px 0 rgba(0, 0, 0, .45);
+    box-sizing: border-box;
+    /* padding: 16px 37px 37px; */
+}
+
+section.collection_discover > h1 {
+    font-size: 60px;
+    line-height: 72px;
+    color: #4B4B4B;
+    font-weight: normal;
+    margin: 0;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.collection_list {
+    margin: 21px 37px 37px;
+    display: table;
+}
+
+.collection_list img {
+    display: block;
+}
+.collection_list a {
+    display: block;
+    float: left;
+}
+
+.collection_list a:nth-child(n+2) {
+    margin-left: 38px;
+}
 
 /* заглушки */
-main{
-    min-height: 200vh;
-}
 
 footer{
     min-height: 20vh;
