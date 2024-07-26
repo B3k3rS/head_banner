@@ -98,6 +98,117 @@ header.page_header{
     margin: 0 auto;
 }
 
+/* about_us */
+
+section.about_us {
+    background: rgba(255, 255, 255, .8);
+    margin-top: 46px;
+    padding: 36px 36px 20px;
+    box-shadow: 11px 11px 20px 0 rgba(0, 0, 0, .45);
+}
+
+.about_visit {
+    float: left;
+}
+
+.about_mailing {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+/* .about_mailing {
+    display: table;
+    margin: 0 auto;
+} */
+
+.about_mailing{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about_shipping {
+    float:right;
+}
+
+.about_visit,
+.about_mailing,
+.about_shipping {
+    text-align: center;
+}
+
+/* .about_visit > img,
+.about_shipping > img
+{
+    position: relative;
+}
+
+.about_visit img::after,
+.about_shipping img::after
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #313131;
+    box-sizing: border-box;
+} */
+
+/* .about_visit > a,
+.about_shipping > a
+{
+    display: table;
+} */
+
+section.about_us > article > h3 {
+    text-transform: uppercase;
+    line-height: 42px;
+    font-size: 36px;
+    color: #4B4B4B;
+    margin: 0;
+    margin-top: 12px;
+}
+
+.about_mailing > form{
+    display: table;
+    box-sizing: border-box;
+    width: 240px;
+    line-height: 24px;
+    font-size: 16px;
+    padding: 0 15px 20px;
+    background: #E9E8E8;
+}
+
+.about_mailing > form > p {
+    margin: 0;
+    margin-top: 2px;
+}
+
+.about_mailing > form > label,
+.about_mailing > form > input
+{
+    float: left;
+    clear: both;
+}
+
+.about_mailing > form > input {
+    width: 210px;
+    height: 30px;
+    border: none;
+    padding: 0;
+}
+
+label[for="name"] {
+    margin-top: 2px;
+}
+
+
+label[for="email"] {
+    margin-top: 4px;
+}
+
 footer{
     background: #2D2D2D;
 }
