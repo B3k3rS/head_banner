@@ -7,23 +7,7 @@
     <title>DeLille Cellars</title>
 </head>
 <body>
-    <!-- <div class="head_banner">
-        <header class="page_header">
-            <div class="page_header_logo"><img src="./images/DC_logo_v3.png" alt="logo" class="header_logo"></div>
-            <div class="page_header_text">
-                <a href="#">Login</a>
-                <nav class="header_navmenu">
-                    <a href="#">Home</a>
-                    <a href="#">Winery</a>
-                    <a href="#">Our wine</a>
-                    <a href="#">Wine club</a>
-                    <a href="#">Events</a>
-                </nav>
-            </div>
-        </header>
-    </div> -->
-
-    <header class="page_header">
+      <header class="page_header">
         <div class="container">
             <a href="./index.html" class="page_header_logo">
                 <img src="./images/DC_logo_v3.png" alt="logo">
@@ -47,19 +31,19 @@
         </div>
     </header>
     <main>
-        <div class="slider">
+        <figure class="slider">
             <img src="./images/slideshow_1.jpg" alt="slide">
-        </div>
+        </figure>
 
         <section class="about_us container">
 
-            <article class="about_visit">
+            <div class="about_visit">
                 <a href="#"><img src="./images/about_visit.jpg" alt="visit us"></a>
                 <h3>visit us</h3>
-            </article>
+            </div>
 
-            <article class="about_mailing">
-                <form action="#" method="post" autocomplete="on">
+            <div class="about_mailing">
+                <form action="#" method="POST" autocomplete="on">
                     <p>Sing Up!</p>
                     <label for="name">Name</label>
                     <input id="name" type="text">
@@ -67,13 +51,71 @@
                     <input id="email" type="email">
                 </form>
                 <h3>mailing us</h3>
-            </article>
+            </div>
 
-            <article class="about_shipping">
+            <div class="about_shipping">
                 <a href=""><img src="./images/about_shipping.jpg" alt="shipping"></a>
                 <h3>shipping</h3>
+            </div>
+
+        </section>
+
+        <section class="sell_wine container">
+            <article>
+                <div class="wine_sell_card">
+                    <h2>Order Your D2 2010 Release Today!</h2>
+                    <img src="./images/columbia_wine.jpg" alt="columbia wine">
+                    <p>This 2012 Gold Medal winner of the Sunset International Wine Compeition is a must have for your collection! Showing wonderful complex aromas of red and black berries, anise, nutmeg, cedar, cocoa and wood smoked cinnamon characters. </p>
+                    <div class="wine_sell_info">
+                        <div class="wine_sell_price">
+                            <p>Price</p>
+                            <p>Bottle / Case</p>
+                            <p>40$  <span>/</span> 480$</p>
+                        </div>
+                        <!-- <pre>
+                            Price
+                            Bottle / Case
+                            40$    / 480$
+                        </pre> -->
+                        <form action="#" method="POST">
+                            <label for="wine_qty_1">QTY</label>
+                            <input id="wine_qty_1" type="number" min="1" value="1">
+                            <a href="#"><button type="submit">Buy now</button></a>
+                        </form>
+                        <img src="./images/Crest Dark.png" alt="crest">
+                    </div>
+
+                    
+                </div> 
             </article>
 
+            <article>
+                <div class="wine_sell_card">
+                    <h2>Meet The 2012 Chaleur Estate Blanc!</h2>
+                    <img src="./images/white_wine.jpg" alt="columbia wine">
+                    <p>A honeyed richness is expressed in the mouth unfolding to reveal sweet grass and herbs, sweet cream and once again, guava andcitrus.  The powerful richness, juicy acidity and fine balance of this wine really sets it apart in style and quality. </p>
+                    <div class="wine_sell_info">
+                        <div class="wine_sell_price">
+                            <p>Price</p>
+                            <p>Bottle / Case</p>
+                            <p>40$  <span>/</span> 480$</p>
+                        </div>
+                        <!-- <pre>
+                            Price
+                            Bottle / Case
+                            40$    / 480$
+                        </pre> -->
+                        <form action="#" method="POST">
+                            <label for="wine_qty_1">QTY</label>
+                            <input id="wine_qty_1" type="number" min="1" value="1">
+                            <a href="#"><button type="submit">Buy now</button></a>
+                        </form>
+                        <img src="./images/Crest Dark.png" alt="crest">
+                    </div>
+
+                    
+                </div> 
+            </article>
         </section>
     </main>
 

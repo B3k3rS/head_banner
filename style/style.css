@@ -1,7 +1,16 @@
 /* fonts */
 @font-face {
     font-family: "High Tower Text";
-    src: url(../files/HTOWERT.TTF);
+    src: url(../files/high-tower-text\ \(1\).ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Neutra Text";
+    src: url(../files/neutra-text-light-5872613aeda5b.otf);
+    font-weight: 100;
+    font-style: normal;
 }
 
 /* header */
@@ -9,8 +18,15 @@ body{
     padding: 0;
     margin: 0;
     font-family: "High Tower Text";
-    background-color: #F6F4EE;
-    background-image: url("../images/HorizontalGrain\ BG.jpg");
+    /* background-image: url("../images/HorizontalGrain\ BG.jpg"), url("../images/Crest\ BG.png"), url("../images/Crest\ BG.png"); */
+    /* background-repeat: repeat, no-repeat, no-repeat; */
+    /* background-position: top left, bottom right; */
+
+    /* background-image: url("../images/HorizontalGrain\ BG.jpg"), url("../images/Crest\ BG.png"); */
+
+    background-image: url("../images/Crest\ BG.png"), url("../images/Crest\ BG.png"), url("../images/HorizontalGrain\ BG.jpg");
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-position: 15% 15%, bottom right, left top;
 }
 
 a {
@@ -98,13 +114,19 @@ header.page_header{
     margin: 0 auto;
 }
 
+.slider img {
+    display: block;
+}
+
 /* about_us */
 
 section.about_us {
     background: rgba(255, 255, 255, .8);
-    margin-top: 46px;
+    margin-top: 50px;
     padding: 36px 36px 20px;
     box-shadow: 11px 11px 20px 0 rgba(0, 0, 0, .45);
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .about_visit {
@@ -113,19 +135,8 @@ section.about_us {
 
 .about_mailing {
     display: inline-block;
-    margin: 0 auto;
 }
 
-/* .about_mailing {
-    display: table;
-    margin: 0 auto;
-} */
-
-.about_mailing{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
 
 .about_shipping {
     float:right;
@@ -137,38 +148,21 @@ section.about_us {
     text-align: center;
 }
 
-/* .about_visit > img,
-.about_shipping > img
+.about_visit img,
+.about_shipping img
+
 {
-    position: relative;
+    display: block;
 }
 
-.about_visit img::after,
-.about_shipping img::after
-{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 1px solid #313131;
-    box-sizing: border-box;
-} */
-
-/* .about_visit > a,
-.about_shipping > a
-{
-    display: table;
-} */
-
-section.about_us > article > h3 {
+section.about_us h3 {
     text-transform: uppercase;
     line-height: 42px;
     font-size: 36px;
     color: #4B4B4B;
     margin: 0;
     margin-top: 12px;
+    font-weight: normal;
 }
 
 .about_mailing > form{
@@ -195,7 +189,7 @@ section.about_us > article > h3 {
 
 .about_mailing > form > input {
     width: 210px;
-    height: 30px;
+    line-height: 30px;
     border: none;
     padding: 0;
 }
@@ -211,6 +205,127 @@ label[for="email"] {
 
 footer{
     background: #2D2D2D;
+}
+
+/* wine sell */
+section.sell_wine {
+    margin-top: 50px;
+}
+
+section.sell_wine > article {
+    background: rgba(255, 255, 255, .8);
+    box-shadow: 11px 11px 20px 0 rgba(0, 0, 0, .45);
+    padding: 20px;
+}
+
+section.sell_wine > article:first-child {
+    float: left;
+}
+
+section.sell_wine > article:last-child {
+    float: right;
+}
+
+.wine_sell_card {
+    background: #2D2D2D;
+    color: #fff;
+    padding: 16px 0;
+    width: 430px;
+}
+
+.wine_sell_card > h2 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: normal;
+    margin: 0 0 15px;
+    text-align: center;
+}
+
+.wine_sell_card > p {
+    width: 380px;
+    margin: 16px 25px 0;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: "Neutra Text";
+    color: #FEFBFB;
+}
+
+.wine_sell_card > .wine_sell_info {
+    display: table;
+    margin: 13px 33px 16px 25px;
+    box-sizing: border-box;
+    /* width: 380px; */
+}
+
+.wine_sell_price {
+    float: left;
+}
+.wine_sell_price > p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 27px;
+    font-family: "High Tower Text";
+}
+
+.wine_sell_price > p > span {
+    padding-left: 15px;
+}
+
+.wine_sell_card > .wine_sell_info > form {
+    float: left;
+    margin-left: 50px;
+    font-family: "Neutra Text";
+    font-weight: bold;
+}
+
+.wine_sell_card > .wine_sell_info > img {
+    display: block;
+    float: left;
+    margin-left: 27px;
+}
+
+.wine_sell_card > .wine_sell_info > form > input {
+    width: 50px;
+    line-height: 30px;
+    border: none;
+    padding: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.wine_sell_card > .wine_sell_info > form > *
+{
+    float: left;
+}
+
+.wine_sell_card > .wine_sell_info > form > a
+{
+    margin-top: 26px;
+    clear: left;
+}
+
+.wine_sell_card > .wine_sell_info > form button {
+    border: none;
+    background: none;
+    font-size: inherit;
+    line-height: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    padding: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.wine_sell_card > .wine_sell_info > form button:hover {
+    border-bottom: 1px solid #fff;
+}
+
+.wine_sell_card > .wine_sell_info > form > label {
+    padding-right: 9px;
+    font-size: 18px;
+    line-height: 27px;
 }
 
 
