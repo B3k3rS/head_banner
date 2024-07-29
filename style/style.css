@@ -252,6 +252,10 @@ section.sell_wine > article:last-child {
     /* width: 380px; */
 }
 
+.wine_sell_card > img {
+    vertical-align: bottom;
+}
+
 .wine_sell_price {
     float: left;
 }
@@ -328,7 +332,6 @@ section.collection_discover {
     margin: 50px auto;
     box-shadow: 11px 11px 20px 0 rgba(0, 0, 0, .45);
     box-sizing: border-box;
-    /* padding: 16px 37px 37px; */
 }
 
 section.collection_discover > h1 {
