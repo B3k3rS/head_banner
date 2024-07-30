@@ -89,6 +89,12 @@ header.page_header{
     color: tomato;
 }
 
+.page_header_text a:not(:hover)
+{
+    transition: 0.6s;
+    color: inherit;
+}
+
 .header_nav > ul {
     list-style: none;
     padding: 0;
@@ -231,7 +237,6 @@ section.sell_wine > article:nth-child(even) {
 .wine_sell_card {
     background: #2D2D2D;
     color: #fff;
-    width: 430px;
     display: table;
 }
 
@@ -239,17 +244,21 @@ section.sell_wine > article:nth-child(even) {
     font: 400 24px/28px "High Tower Text";
     margin: 16px 0 15px;
     text-align: center;
+
 }
 
 .wine_sell_card > p {
     margin: 16px 25px 0;
     font: 14px/20px "Neutra Text";
     color: #FEFBFB;
+    max-width: 380px;
 }
 
 .wine_sell_card > .wine_sell_info {
     display: table;
-    margin: 13px 25px 16px;
+    padding: 13px 25px 16px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .wine_sell_card img {
@@ -306,7 +315,7 @@ section.collection_discover {
     text-align: center;
 }
 
-section.collection_discover h1 {
+section.collection_discover h2 {
     margin: 16px 0 0;
     color: #4B4B4B;
     font: 400 60px/72px "High Tower Text";
@@ -320,6 +329,10 @@ section.collection_discover a
 {
     display: inline-block;
     margin: 21px 19px 37px;
+}
+
+section.collection_discover a:last-child {
+    margin-bottom: 20px;
 }
 
 /* footer */
@@ -378,17 +391,17 @@ div.page_footer_about ul {
     display: inline-block;
 }
 
-.page_footer_contact ul li:nth-child(1) {
+.page_footer_contact li:nth-child(1) a {
     background-image: url("../images/letter.png");
     background-position: center left;
 }
 
-.page_footer_contact ul li:nth-child(2) {
+.page_footer_contact li:nth-child(2) a {
     background-image: url("../images/phone.png");
     background-position: 17px center;
 }
 
-.page_footer_contact ul li
+.page_footer_contact li a
 {
     background-repeat: no-repeat;
 }
@@ -437,7 +450,6 @@ div.page_footer_about ul {
     }
 }
 
-
 @media (max-width: 960px) {
     .container {
         width: 96%;
@@ -477,6 +489,11 @@ div.page_footer_about ul {
 }
 
 @media (max-width: 768px) {
+    header.page_header {
+        position: relative;
+        background: #fff;
+    }
+
     .page_header_logo {
         width: 100%;
         margin-bottom: 0;
@@ -525,9 +542,9 @@ div.page_footer_about ul {
         width: auto;
     }
 
-    .header_nav li:nth-child(n+2) {
+    /* .header_nav li:nth-child(n+2) {
         display: none;
-    }
+    } */
 
     .header_nav li:nth-child(n+2) {
         text-align: center;
@@ -554,6 +571,13 @@ div.page_footer_about ul {
     }
 }
 
+@media (max-width: 480px) {
+    .page_header_logo img {
+        width: 80%;
+    }
+}
+
+
 /* slider */
 @media (max-width: 1200px) {
     .slider  {
@@ -565,6 +589,13 @@ div.page_footer_about ul {
     .slider {
         width: 100%;
     }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        display: none;
+    }
+
 }
 /* about us  */
 
@@ -588,5 +619,175 @@ div.page_footer_about ul {
     .about_mailing,
     .about_shipping{
         margin: 36px 3vw 0;
+    }
+}
+
+@media (max-width: 600px) {
+    section.about_us {
+        width: 100%;
+        display: block;
+    }
+
+    .about_visit,
+    .about_mailing,
+    .about_shipping
+    {
+        width: 70%;
+        margin: 50px 0 0;
+    }
+
+    section.about_us img,
+    section.about_us form {
+        width: 100%;
+    }
+
+    .about_mailing input{
+        margin: 0 10%;
+        box-sizing: border-box;
+        width: 80%;
+    }
+    .about_mailing label{
+        margin-left: 10%;
+    }
+}
+
+/* wine_sell */
+@media (max-width: 960px)
+{
+    section.sell_wine article {
+        width: 44%;
+    }
+    
+    .wine_sell_card > img{
+        width: 100%;
+    }
+
+    .wine_sell_info form {
+        float: right;
+        margin-left: 0;
+    }
+
+    .wine_sell_info > a {
+        margin-top: 10px;
+        float: right;
+        clear: both;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    section.sell_wine > article:nth-child(n) {
+        float: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .wine_sell_card {
+        width: 100%;
+    }
+
+    .wine_sell_card > p {
+        max-width: 90%;
+        margin: 16px 5%;
+        font-size: 16px;
+    }
+
+    .wine_sell_info form {
+        float: left;
+        margin-left: 70px;
+    }
+
+    .wine_sell_info > a {
+        margin-top: 0;
+        clear: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .wine_sell_info form {
+        float: right;
+        margin-left: 0;
+    }
+
+    .wine_sell_info > a {
+        margin-top: 10px;
+        float: right;
+        clear: both;
+    }
+}
+
+@media (max-width: 360px) {
+    .wine_sell_card > p {
+        font-size: 14px;
+    }
+}
+
+/* collection discover */
+
+@media (max-width: 960px) {
+    section.collection_discover h2 {
+        font-size: 48px;
+    }
+    
+    section.collection_discover a {
+        width: 30%;
+        margin: 21px 0 0;
+        padding: 0 1%;
+    }
+    
+    section.collection_discover img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    section.collection_discover h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    section.collection_discover a {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    section.collection_discover a {
+        width: 90%;
+    }
+}
+
+/* footer */
+
+@media (max-width: 960px) {
+    .page_footer_contact {
+        margin-left: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page_footer_about,
+    .page_footer_contact,
+    .page_footer_social {
+        float: none;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    footer.page_footer h3 {
+        /* font-size: 24px;
+        line-height: 30px; */
+        display: inline-block;
+    }
+
+    .page_footer_social ul li {
+        float: none;
+        display: inline-block;
+    }
+
+    .page_footer_about li a {
+        padding: 0 10px;
+        line-height: 24px;
     }
 }
