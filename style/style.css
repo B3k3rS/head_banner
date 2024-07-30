@@ -40,6 +40,7 @@ header.page_header{
     left: 0;
     width: 100%;
     font-family: "High Tower Text";
+    color: #303030;
 }
 
 .page_header_logo{
@@ -78,6 +79,10 @@ header.page_header{
     line-height: 21px;   
 }
 
+.login svg {
+    display: none;
+}
+
 .page_header_text a:hover
 {
     transition: 0.6s;
@@ -95,7 +100,7 @@ header.page_header{
     margin-left: 12px;
 }
 
-.header_nav > ul > li:first-child{
+.header_nav > ul > li:nth-child(2){
     margin: 0;
 }
 
@@ -389,15 +394,20 @@ div.page_footer_about ul {
     background-repeat: no-repeat;
 }
 
-.page_footer_social li {
+.page_footer_social ul li {
     float: left;
-    vertical-align: bottom;
+    line-height: 45px;
+    margin-top: 18px;
+    
 }
 
 .page_footer_social a {
-    width: 45px;
-    height: 45px;
-    display: block;
+    padding: 22.5px;
+    font-size: 0;
+    margin-top: 10px;
+    vertical-align: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .page_footer .container {
@@ -416,97 +426,160 @@ div.page_footer_about ul {
     background-image: url("../images/PIN_white.png");
 }
 
-.page_footer_social a {
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 18px;
-    
-}
-
-.page_footer_social li:nth-child(n+2) a{
+.page_footer_social li:nth-child(n+2){
     margin-left: 20px;
 }
+/* adaptive */ 
 
-/* @media (max-width: 1200px) {
+@media (max-width: 1200px) {
+    body {
+        background-position: -500px -300px, 700px 500px, left top;
+        background-attachment: fixed;
+    }
+}
+
+
+@media (max-width: 960px) {
+    .container {
+        width: 96%;
+    }
+
+    body {
+        background-position: -500px -300px, 500px 500px, left top;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-position: -600px -500px, 400px 400px, left top;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+}
+
+/* header adaptive */
+
+@media (max-width: 960px) {
+    .page_header_logo {
+        width: 290px;
+        margin: 14px 0;
+    }
+    .page_header_logo img {
+        max-width: max(290px, 100%);
+    }
+}
+
+.header_nav li:first-child {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .page_header_logo {
+        width: 100%;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .page_header_text {
+        margin: 0 auto;
+        float: none;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .login a { /* normal? */
+        font-size: 0;
+    }
+
+    .login,
+    .header_nav {
+        float: none;
+        margin-top: 0;
+    }
+    .login {
+        text-align: right;
+    }
+
+    .login svg {
+        display: inline;
+    }
+    .login > span {
+        display: none;
+    }
+
+    .page_header_text {
+        position: relative;
+    }
+
+    .page_header_text svg {
+        margin: 0 10px;
+    }
+
+    .header_nav li:first-child {
+        display: inline-block;
+        position: absolute;
+        top: 16px;
+        width: auto;
+    }
+
+    .header_nav li:nth-child(n+2) {
+        display: none;
+    }
+
+    .header_nav li:nth-child(n+2) {
+        text-align: center;
+    }
+
+    .header_nav li:nth-child(n+2) a {
+        width: 100%;
+        font-size: 26px;
+        line-height: 40px;
+    }
+
+    .header_nav ul li {
+        margin: 0; 
+        width: 100%;
+    }
+
+    .header_nav a {
+        display: table;
+    }
+
+    .page_header_text {
+        width: 100%;
+    }
+}
+
+/* slider */
+@media (max-width: 1200px) {
+    .slider  {
+        width: 960px;
+    }
+}
+
+@media (max-width: 960px) {
     .slider {
         width: 100%;
     }
 }
+/* about us  */
 
-@media (max-width: 1024px) {
-    .container {
-        width: 100%;
-    }
-}
-
-header
 @media (max-width: 960px) {
-    .page_header_logo {
-        width: 350px;
-    }
-
-    .page_header_logo > img
-    {
-        margin: 11px 0;
-        width: 100%;
-    }
-}
-
-@media (max-width: 860px) {
-    .page_header_logo {
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-        text-align: center;
-    }
-
-    .page_header_logo > img
-    {
-        margin: 11px 0;
-        width: auto;
-    }
-
-    .page_header_text {
-        margin: 0 auto;
-        float: none;
-        display: table;
-    }
-
-    .login {
-        float: right;
-        clear: none;
-    }
-
-    .header_nav {
-        float: left;
-        clear: none;
-    }
-
-    .header_nav,
-    .login
-    {
+    section.about_us h3{
         margin-bottom: 10px;
     }
 
-    .page_header_text {
-        width: 96%;
+    .about_visit,
+    .about_mailing,
+    .about_shipping{
+        float: none;
+        margin: 0;
+        display: inline-block;
+        margin: 36px 30px 0;
     }
 }
 
-
-about
-@media (max-width: 960px) {
-    .container {
-        width: 96%;
-    } 
-
-    .about_mailing {
-        float: none;
-        display: inline-block;
-        margin: 36px auto;
-    }
-    
-    section.about_us {
-        text-align: center; 
-    }
-} */
