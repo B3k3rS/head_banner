@@ -250,7 +250,6 @@ section.sell_wine > article:nth-child(even) {
 .wine_sell_card > .wine_sell_info {
     display: table;
     margin: 13px 25px 16px;
-    width: 380px;
 }
 
 .wine_sell_card img {
@@ -532,10 +531,11 @@ div.page_footer_about ul {
 
     .header_nav li:nth-child(n+2) {
         text-align: center;
+        vertical-align: bottom;
     }
 
     .header_nav li:nth-child(n+2) a {
-        width: 100%;
+        width: 100vw;
         font-size: 26px;
         line-height: 40px;
     }
@@ -579,7 +579,14 @@ div.page_footer_about ul {
         float: none;
         margin: 0;
         display: inline-block;
-        margin: 36px 30px 0;
+        margin: 36px 7vw 0;
     }
 }
 
+@media (max-width: 768px) {
+    .about_visit,
+    .about_mailing,
+    .about_shipping{
+        margin: 36px 3vw 0;
+    }
+}
