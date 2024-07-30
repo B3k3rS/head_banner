@@ -7,7 +7,7 @@
     <title>DeLille Cellars</title>
 </head>
 <body>
-      <header class="page_header">
+    <header class="page_header">
         <div class="container">
             <a href="./index.html" class="page_header_logo">
                 <img src="./images/DC_logo_v3.png" alt="logo">
@@ -31,11 +31,11 @@
         </div>
     </header>
     <main>
-        <figure class="slider">
+        <div class="slider">
             <img src="./images/slideshow_1.jpg" alt="slide">
-        </figure>
+        </div>
 
-        <section class="about_us container">
+        <section class="about_us container section_background">
 
             <div class="about_visit">
                 <a href="#"><img src="./images/about_visit.jpg" alt="visit us"></a>
@@ -50,7 +50,7 @@
                     <label for="email">Email Address</label>
                     <input id="email" type="email">
                 </form>
-                <h3>mailing us</h3>
+                <h3>mailing list</h3>
             </div>
 
             <div class="about_shipping">
@@ -61,8 +61,8 @@
         </section>
 
         <section class="sell_wine container">
-            <article>
-                <div class="wine_sell_card"> <!-- form? -->
+            <article class="section_background">
+                <div class="wine_sell_card">
                     <h2>Order Your D2 2010 Release Today!</h2>
                     <img src="./images/columbia_wine.jpg" alt="columbia wine">
                     <p>This 2012 Gold Medal winner of the Sunset International Wine Compeition is a must have for your collection! Showing wonderful complex aromas of red and black berries, anise, nutmeg, cedar, cocoa and wood smoked cinnamon characters. </p>
@@ -74,17 +74,17 @@
                         </div>
                         <form action="#" method="POST">
                             <label for="wine_qty_1">QTY</label>
-                            <input id="wine_qty_1" type="number" min="1" value="0">
-                            <a href="#"><button type="submit">Buy now</button></a> <!-- remove button? -->
+                            <input id="wine_qty_1" type="number" min="1" max="99" value="1">
+                            <a href="#">Buy now</a>
                         </form>
-                        <img src="./images/Crest Dark.png" alt="crest">
+                        <a href="#"><img src="./images/crest_dark.png" alt="crest"></a>
                     </div>
 
                     
                 </div> 
             </article>
 
-            <article>
+            <article class="section_background">
                 <div class="wine_sell_card">
                     <h2>Meet The 2012 Chaleur Estate Blanc!</h2>
                     <img src="./images/white_wine.jpg" alt="columbia wine">
@@ -97,29 +97,57 @@
                         </div>
                         <form action="#" method="POST">
                             <label for="wine_qty_2">QTY</label>
-                            <input id="wine_qty_2" type="number" min="1" value="0">
-                            <a href="#"><button type="submit">Buy now</button></a> 
+                            <input id="wine_qty_2" type="number" min="1" max="99" value="1">
+                            <a href="#">Buy now</a> 
                         </form>
-                        <img src="./images/Crest Dark.png" alt="crest">
+                        <a href="#"><img src="./images/crest_dark.png" alt="crest"></a>
                     </div>
 
                     
                 </div> 
             </article>
+
         </section>
         
-        <section class="collection_discover container">
+        <section class="collection_discover container section_background">
             <h1>DISCOVER THE COLLECTION</h1>
-            <section class="collection_list"> <!-- nav? -->
-                <a href="#"><img src="./images/Delille.jpg" alt="DeLille Cellart"></a>
-                <a href="#"><img src="./images/Grand Ciel.jpg" alt="Grand Ciel"></a>
-                <a href="#"><img src="./images/Doyenne.jpg" alt="Doyenne"></a>
-            </section>
+            <a href="#"><img src="./images/Delille.jpg" alt="DeLille Cellart"></a>
+            <a href="#"><img src="./images/Grand Ciel.jpg" alt="Grand Ciel"></a>
+            <a href="#"><img src="./images/Doyenne.jpg" alt="Doyenne"></a>
         </section>
     </main>
 
-    <footer>
+    <footer class="page_footer">
+        <div class="container">
+            <div class="page_footer_about">
+                <h3>About Us</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">More</a></li>
+                    </ul>
+                </nav>
+            </div>
 
+            <div class="page_footer_contact">
+                <h3>Get in Touch</h3>
+                <ul>
+                    <li><a href="mailto:info@delillecellars.com">info@delillecellars.com</a></li>
+                    <li><a href="tel:+1-425-877-9472">425-877-9472</a></li>
+                </ul>
+            </div>
+            
+            <div class="page_footer_social">
+                <h3>Keep up with us Online</h3>
+                <ul>
+                    <li><a class="social_fb" href="#" target="_blank"></a></li>
+                    <li><a class="social_tw" href="#" target="_blank"></a></li>
+                    <li><a class="social_pin" href="#" target="_blank"></a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
     
 

@@ -1,24 +1,23 @@
 /* fonts */
 @font-face {
     font-family: "High Tower Text";
-    src: url(../files/high-tower-text\ \(1\).ttf);
-    font-weight: 400;
-    font-style: normal;
+    src:
+        local("High Tower Text"), 
+        url(../files/high-tower-text.ttf) format('truetype');
 }
 
 @font-face {
     font-family: "Neutra Text";
-    src: url(../files/neutra-text-light-5872613aeda5b.otf);
-    font-weight: 100;
-    font-style: normal;
+    src:
+        local("Neutra Text"), 
+        url(../files/neutra-text-light.otf) format('opentype');
 }
 
 /* header */
 body{
     padding: 0;
     margin: 0;
-    font-family: "High Tower Text";
-    background-image: url("../images/Crest\ BG.png"), url("../images/Crest\ BG.png"), url("../images/HorizontalGrain\ BG.jpg");
+    background-image: url("../images/crest_bg.png"), url("../images/crest_bg.png"), url("../images/horizontal_grain_bg.jpg");
     background-repeat: no-repeat, no-repeat, repeat;
     background-position: 15% 15%, 85% 100%, left top;
 }
@@ -37,7 +36,10 @@ a {
 header.page_header{
     background: rgba(255,255,255,.8);
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    font-family: "High Tower Text";
 }
 
 .page_header_logo{
@@ -45,6 +47,7 @@ header.page_header{
 }
 
 .page_header_logo > img {
+    vertical-align: bottom;
     margin: 1px 0 4px;
 }
 
@@ -77,18 +80,14 @@ header.page_header{
 
 .page_header_text a:hover
 {
-    border-bottom: 1px solid #2D2D2D;
+    transition: 0.6s;
+    color: tomato;
 }
-
-/* .header_cart:before {
-    content: " | ";
-} */
 
 .header_nav > ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    
+    margin: 0;    
 }
 
 .header_nav > ul > li {
@@ -106,34 +105,41 @@ header.page_header{
 .slider {
     display: table;
     margin: 0 auto;
+    width: 1200px;
 }
 
 .slider img {
     vertical-align: bottom;
+    width: 100%;
+}
+
+/* .section_background */
+
+.section_background {
+    background: rgba(255, 255, 255, .8);
+    box-shadow: 11px 11px 20px 0 rgba(0, 0, 0, .45);
+    margin-top: 50px;
 }
 
 /* about_us */
 
 section.about_us {
-    background: rgba(255, 255, 255, .8);
-    margin-top: 50px;
-    padding: 36px 36px 20px;
-    box-shadow: 11px 11px 20px 0 rgba(0, 0, 0, .45);
     text-align: center;
-    box-sizing: border-box;
 }
 
 .about_visit {
     float: left;
+    margin: 36px 0 20px 36px;
 }
 
 .about_mailing {
-    display: inline-block;
+    float: left;
+    margin: 36px 0 20px 73px;
 }
-
 
 .about_shipping {
     float:right;
+    margin: 36px 36px 20px 0;
 }
 
 .about_visit,
@@ -146,46 +152,48 @@ section.about_us {
 .about_shipping img
 {
     vertical-align: bottom;
+    border: 1px solid #313131;
 }
 
 section.about_us h3 {
+    margin: 12px 0 0;
+    
     text-transform: uppercase;
-    line-height: 42px;
-    font-size: 36px;
-    color: #4B4B4B;
-    margin: 0;
-    margin-top: 12px;
-    font-weight: normal;
+    color:  #4B4B4B;
+    font: 400 36px/42px "High Tower Text";
 }
 
 .about_mailing > form{
     display: table;
-    box-sizing: border-box;
     width: 240px;
-    line-height: 24px;
-    font-size: 16px;
-    padding: 0 15px 20px;
+    margin: 1px auto;
     background: #E9E8E8;
 }
 
-.about_mailing > form > p {
-    margin: 0;
-    margin-top: 2px;
+.about_mailing p,
+.about_mailing label {
+    color: #4B4B4B;
+    font: 16px/24px "High Tower Text";
 }
 
-.about_mailing > form > label,
-.about_mailing > form > input
+.about_mailing p {
+    margin: 2px 0 0;
+}
+
+.about_mailing label,
+.about_mailing input
 {
     float: left;
     clear: both;
+    margin: 0 15px;    
 }
 
-.about_mailing > form > input {
+.about_mailing input {
     width: 210px;
-    line-height: 30px;
-    font-size: 14px;
+    font: 18px/30px "High Tower Text";
     border: none;
-    padding: 0;
+    padding: 0 10px;
+    box-shadow: inset 1px 1px 5px 0 rgba(0, 1, 1, .23);
 }
 
 label[for="name"] {
@@ -197,171 +205,308 @@ label[for="email"] {
     margin-top: 4px;
 }
 
-footer{
-    background: #2D2D2D;
+input#email {
+    margin-bottom: 20px;
 }
 
 /* wine sell */
-section.sell_wine {
-    margin-top: 50px;
-}
 
 section.sell_wine > article {
-    background: rgba(255, 255, 255, .8);
-    box-shadow: 11px 11px 20px 0 rgba(0, 0, 0, .45);
     padding: 20px;
 }
 
-section.sell_wine > article:first-child {
+section.sell_wine > article:nth-child(odd) {
     float: left;
 }
 
-section.sell_wine > article:last-child {
+section.sell_wine > article:nth-child(even) {
     float: right;
 }
 
 .wine_sell_card {
     background: #2D2D2D;
     color: #fff;
-    padding: 16px 0;
     width: 430px;
+    display: table;
 }
 
 .wine_sell_card > h2 {
-    margin: 0;
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: normal;
-    margin: 0 0 15px;
+    font: 400 24px/28px "High Tower Text";
+    margin: 16px 0 15px;
     text-align: center;
 }
 
 .wine_sell_card > p {
-    width: 380px;
     margin: 16px 25px 0;
-    font-size: 14px;
-    line-height: 20px;
-    font-family: "Neutra Text";
+    font: 14px/20px "Neutra Text";
     color: #FEFBFB;
 }
 
 .wine_sell_card > .wine_sell_info {
     display: table;
-    margin: 13px 33px 16px 25px;
-    box-sizing: border-box;
-    /* width: 380px; */
+    margin: 13px 25px 16px;
+    width: 380px;
 }
 
-.wine_sell_card > img {
+.wine_sell_card img {
     vertical-align: bottom;
 }
 
 .wine_sell_price {
     float: left;
 }
-.wine_sell_price > p {
+.wine_sell_price p {
     margin: 0;
-    font-size: 18px;
-    line-height: 27px;
-    font-family: "High Tower Text";
+    font: 18px/27px "High Tower Text";
 }
 
-.wine_sell_price > p > span {
-    padding-left: 15px;
-}
-
-.wine_sell_card > .wine_sell_info > form {
+.wine_sell_info form {
     float: left;
     margin-left: 50px;
-    font-family: "Neutra Text";
-    font-weight: bold;
 }
 
-.wine_sell_card > .wine_sell_info > img {
-    vertical-align: bottom;
-    float: left;
-    margin-left: 27px;
+.wine_sell_info a {
+    float: right;
 }
 
-.wine_sell_card > .wine_sell_info > form > input {
-    width: 50px;
-    line-height: 30px;
+.wine_sell_info form input {
     border: none;
+    width: 50px;
     padding: 0;
     text-align: center;
-    font-size: 14px;
+
+    font: 18px/30px "Neutra Text"
 }
 
-.wine_sell_card > .wine_sell_info > form > *
+.wine_sell_info form > *
 {
     float: left;
 }
 
-.wine_sell_card > .wine_sell_info > form > a
+.wine_sell_info form a
 {
     margin-top: 26px;
     clear: left;
-}
-
-.wine_sell_card > .wine_sell_info > form button {
-    border: none;
-    background: none;
-    font-size: inherit;
-    line-height: inherit;
-    font-family: inherit;
-    font-weight: inherit;
-    color: inherit;
-    padding: 0;
     text-transform: uppercase;
     cursor: pointer;
-}
 
-.wine_sell_card > .wine_sell_info > form button:hover {
-    border-bottom: 1px solid #fff;
+    font: 700 18px/27px "Neutra Text";
 }
-
-.wine_sell_card > .wine_sell_info > form > label {
+.wine_sell_info form label {
     padding-right: 9px;
-    font-size: 18px;
-    line-height: 27px;
+    font: 700 18px/30px "Neutra Text";
 }
 
 /* wine collection */
 section.collection_discover {
-    background: rgba(255, 255, 255, .8);
-    margin: 50px auto;
-    box-shadow: 11px 11px 20px 0 rgba(0, 0, 0, .45);
-    box-sizing: border-box;
-}
-
-section.collection_discover > h1 {
-    font-size: 60px;
-    line-height: 72px;
-    color: #4B4B4B;
-    font-weight: normal;
-    margin: 0;
-    margin-top: 16px;
     text-align: center;
 }
 
-.collection_list {
-    margin: 21px 37px 37px;
-    display: table;
+section.collection_discover h1 {
+    margin: 16px 0 0;
+    color: #4B4B4B;
+    font: 400 60px/72px "High Tower Text";
 }
 
-.collection_list img {
+section.collection_discover img {
     vertical-align: bottom;
 }
-.collection_list a {
+
+section.collection_discover a
+{
+    display: inline-block;
+    margin: 21px 19px 37px;
+}
+
+/* footer */
+
+footer.page_footer{
+    background: #2D2D2D;
+    margin-top: 50px;
+    color: #fff;
+}
+
+footer.page_footer h3 {
+    font: 18px/18px "Neutra Text";
+    margin: 31px 0 0;
+    padding-bottom: 2px;
+    width: 205px;
+    border-bottom: 1px solid #fff;
+}
+
+footer.page_footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer.page_footer li {
+    font: 14px/18px "Neutra Text";
+}
+
+.page_footer_about,
+.page_footer_contact {
     float: left;
 }
 
-.collection_list a:nth-child(n+2) {
-    margin-left: 38px;
+.page_footer_social {
+    float: right;
 }
 
-/* заглушки */
-
-footer{
-    min-height: 20vh;
+.page_footer_contact {
+    margin-left: 153px;
 }
+
+div.page_footer_about ul {
+    margin-top: 11px;
+}
+
+.page_footer_contact ul li:nth-child(1) a {
+    padding: 18px 0 19px 67px;
+}
+
+.page_footer_contact ul li:nth-child(2) a {
+    padding: 12px 0 11px 67px;
+}
+
+.page_footer_contact ul a
+{
+    display: inline-block;
+}
+
+.page_footer_contact ul li:nth-child(1) {
+    background-image: url("../images/letter.png");
+    background-position: center left;
+}
+
+.page_footer_contact ul li:nth-child(2) {
+    background-image: url("../images/phone.png");
+    background-position: 17px center;
+}
+
+.page_footer_contact ul li
+{
+    background-repeat: no-repeat;
+}
+
+.page_footer_social li {
+    float: left;
+    vertical-align: bottom;
+}
+
+.page_footer_social a {
+    width: 45px;
+    height: 45px;
+    display: block;
+}
+
+.page_footer .container {
+    padding-bottom: 64px;
+}
+
+.social_fb {
+    background-image: url("../images/Fb_white.png");
+}
+
+.social_tw {
+    background-image: url("../images/Twitter_white.png");
+}
+
+.social_pin {
+    background-image: url("../images/PIN_white.png");
+}
+
+.page_footer_social a {
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 18px;
+    
+}
+
+.page_footer_social li:nth-child(n+2) a{
+    margin-left: 20px;
+}
+
+/* @media (max-width: 1200px) {
+    .slider {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 100%;
+    }
+}
+
+header
+@media (max-width: 960px) {
+    .page_header_logo {
+        width: 350px;
+    }
+
+    .page_header_logo > img
+    {
+        margin: 11px 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 860px) {
+    .page_header_logo {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .page_header_logo > img
+    {
+        margin: 11px 0;
+        width: auto;
+    }
+
+    .page_header_text {
+        margin: 0 auto;
+        float: none;
+        display: table;
+    }
+
+    .login {
+        float: right;
+        clear: none;
+    }
+
+    .header_nav {
+        float: left;
+        clear: none;
+    }
+
+    .header_nav,
+    .login
+    {
+        margin-bottom: 10px;
+    }
+
+    .page_header_text {
+        width: 96%;
+    }
+}
+
+
+about
+@media (max-width: 960px) {
+    .container {
+        width: 96%;
+    } 
+
+    .about_mailing {
+        float: none;
+        display: inline-block;
+        margin: 36px auto;
+    }
+    
+    section.about_us {
+        text-align: center; 
+    }
+} */
