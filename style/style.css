@@ -505,6 +505,7 @@ div.page_footer_about ul {
         float: none;
         display: inline-block;
         width: 100%;
+        position: relative;
     }
 
     .login a { /* normal? */
@@ -525,10 +526,6 @@ div.page_footer_about ul {
     }
     .login > span {
         display: none;
-    }
-
-    .page_header_text {
-        position: relative;
     }
 
     .page_header_text svg {
@@ -564,10 +561,6 @@ div.page_footer_about ul {
 
     .header_nav a {
         display: table;
-    }
-
-    .page_header_text {
-        width: 100%;
     }
 }
 
