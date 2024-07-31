@@ -207,12 +207,11 @@ section.about_us h3 {
     box-shadow: inset 1px 1px 5px 0 rgba(0, 1, 1, .23);
 }
 
-label[for="name"] {
+.about_mailing label:nth-child(1) {
     margin-top: 2px;
 }
 
-
-label[for="email"] {
+.about_mailing label:nth-child(2) {
     margin-top: 4px;
 }
 
