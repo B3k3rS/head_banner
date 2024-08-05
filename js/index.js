@@ -1,12 +1,16 @@
-let slider = document.querySelector(".head_banner")
-let slides = ["./images/slideshow_1.png","./images/slideshow_2.png"]
-let slideIndex = 0
+const burgerMenuButton = document.querySelector('li.menu_button')
+const headerNavMenu = document.querySelectorAll('.header_nav > ul > li')
 
+burgerMenuButton.addEventListener('click',()=> {
+    headerNavMenu.forEach((link,id)=> {
+        if(id == 0) return 0;
 
-const sliderInterval = setInterval(() => {
-    slideIndex++;
-    if (slideIndex >= slides.length) {
-        slideIndex = 0;
-    }
-    slider.style.backgroundImage = `url(${slides[slideIndex]})`
-},10000)
+        if (link.style.display != "inline-block") {
+            link.style.display = "inline-block";
+        }
+        else {
+            link.style.display = "none";
+        }
+        
+    })
+})
